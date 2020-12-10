@@ -2,7 +2,7 @@ package ch.fahrzeugsteuer;
 
 public class VehicleTaxCalculator {
 	public int getPriceFromCcm(int ccm) {
-		int price = 0;
+		double price = 0;
 		if (ccm <= 6000) {
 			price = 1258;
 			if (ccm <= 5500) {
@@ -42,11 +42,14 @@ public class VehicleTaxCalculator {
 				}
 			}
 		} else {
-			int factor = 0;
-			factor = ((ccm - 6000) % 1000) + 1;
+			double factor = 0;
+			factor = ((ccm - 6000) / 1000);
+			Math.ceil(factor);
 			price = 1258 + (factor * 300);
+
+
 		}
 
-		return price;
+		return (int) Math.round(price);
 	}
 }
