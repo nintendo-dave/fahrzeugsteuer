@@ -8,7 +8,7 @@ public class Main {
     }
 
 
-    private void printSomething(){
+    public void printSomething(){
         System.out.println("Printed Something haha");
     }
 }
