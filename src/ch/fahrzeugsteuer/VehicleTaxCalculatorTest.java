@@ -6,10 +6,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class VehicleTaxCalculatorTest {
 
+    int ccm = 8000;
+    int expected = 1858;
+
     @Test
-    void is6000() {
+    void isvalue() {
         VehicleTaxCalculator vh = new VehicleTaxCalculator();
-        assertEquals(1258, vh.getPriceFromCcm(6000));
+        assertEquals(expected, vh.getPriceFromCcm(ccm));
     }
 
 }
