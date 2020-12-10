@@ -42,7 +42,9 @@ public class VehicleTaxCalculator {
 				}
 			}
 		} else {
-			price = 1258;
+			int factor = 0;
+			factor = ((ccm - 6000) % 1000) + 1;
+			price = 1258 + (factor * 300);
 		}
 
 		return price;
