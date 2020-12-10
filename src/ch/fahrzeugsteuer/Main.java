@@ -7,7 +7,7 @@ public class Main {
     }
 
 
-    privat void printSomething(){
+    private void printSomething(){
         System.out.println("Printed Something haha");
     }
 }
