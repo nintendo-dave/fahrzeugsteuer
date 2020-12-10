@@ -10,9 +10,18 @@ class VehicleTaxCalculatorTest {
     int expected = 1858;
 
     @Test
-    void isvalue() {
+    void isLowerThan() {
         VehicleTaxCalculator vh = new VehicleTaxCalculator();
         assertEquals(expected, vh.getPriceFromCcm(ccm));
+    }
+
+    @Test
+    void isBiggerThan6000() {
+        int newValue = (ccm - 6000);
+        double devided = Math.floor(newValue / 1000);
+        double  multiplier = devided * 300 + 1258;
+        VehicleTaxCalculator vh = new VehicleTaxCalculator();
+        assertEquals(multiplier, vh.getPriceFromCcm(ccm));
     }
 
 }
