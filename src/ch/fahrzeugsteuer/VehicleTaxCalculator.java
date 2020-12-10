@@ -1,7 +1,5 @@
 package ch.fahrzeugsteuer;
 
-import org.junit.Test;
-
 public class VehicleTaxCalculator {
 	public int getPriceFromCcm(int ccm) {
 		int price = 0;
