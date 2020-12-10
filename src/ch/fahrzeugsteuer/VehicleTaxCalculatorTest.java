@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class VehicleTaxCalculatorTest {
 
-    int ccm = 6102;
+    int ccm = 7102;
     int expected = 1858;
 
     @Test
@@ -25,6 +25,8 @@ class VehicleTaxCalculatorTest {
         double  multiplier = devided * 300 + 1258;
         VehicleTaxCalculator vh = new VehicleTaxCalculator();
         assertEquals(multiplier, vh.getPriceFromCcm(ccm));
+
+        System.out.println(multiplier);
     }
 
 }
