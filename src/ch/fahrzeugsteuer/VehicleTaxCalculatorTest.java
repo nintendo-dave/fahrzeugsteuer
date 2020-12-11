@@ -19,7 +19,7 @@ class VehicleTaxCalculatorTest {
     void isBiggerThan6000() {
         int newValue = (ccm - 6000);
         double devided = Math.floor(newValue / 1000);
-        if(!(ccm % 1000 == 0)){
+        if(ccm % 1000 != 0){
             devided += 1;
         }
         double  multiplier = devided * 300 + 1258;
